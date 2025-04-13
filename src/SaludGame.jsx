@@ -27,7 +27,7 @@ const cards = [
   { text: 'Schick eine Nachricht an jemanden aus deiner Kontaktliste und lass Person X entscheiden, was du schreibst.', shots: 4 },
   { text: 'Küsse Person X auf die Wange.', shots: 3 },
   { text: 'Krieche 5 Meter, während Person X zuschaut.', shots: 2 },
-  { text: 'Stelle dir vor, du bist ein Roboter und interagiere mit Person X für 2 Minuten.', shots: 3 },
+  { text: 'Stell dich vor Person X und halte eine Rede wie ein Politiker.', shots: 4 },
   { text: 'Trage Person X auf deinen Schultern für 30 Sekunden.', shots: 4 },
   { text: 'Lass Person X dir eine neue Frisur verpassen.', shots: 5 },
   { text: 'Gib Person X deinen Handybildschirm und lass sie eine peinliche Nachricht schreiben.', shots: 3 },
@@ -148,6 +148,7 @@ export default function SaludGame() {
               textAlign: 'center',
               boxShadow: '0 6px 12px rgba(0,0,0,0.3)',
             }}>
+              <p style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>{`Runde von: ${players[currentPlayerIndex]}`}</p>
               <p style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>{currentCard.text}</p>
               <div style={{ fontSize: '1.5rem' }}>{'🥃'.repeat(currentCard.shots)}</div>
             </div>
@@ -157,4 +158,3 @@ export default function SaludGame() {
     </div>
   );
 }
-
